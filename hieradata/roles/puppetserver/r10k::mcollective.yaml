@@ -1,0 +1,4 @@
+---
+r10k::mcollective::agent_path: /opt/puppetlabs/mcollective/mcollective/agent
+r10k::mcollective::app_path: /opt/puppetlabs/mcollective/mcollective/application
+r10k::mcollective::git_ssl_verify: 1

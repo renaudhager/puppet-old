@@ -1,0 +1,2 @@
+---
+profiles::apt::ubuntu_location: 'http://archive.ubuntu.com/ubuntu/'

@@ -1,0 +1,9 @@
+---
+role: puppetserver
+
+include:
+  classes:
+    - puppetdb
+    - profiles::puppet::db
+    - docker
+    - docker::run_instance

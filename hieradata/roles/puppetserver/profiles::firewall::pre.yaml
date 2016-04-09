@@ -1,0 +1,6 @@
+---
+profiles::firewall::pre::rules:
+  '100 accept port puppetserver':
+    proto: tcp
+    dport: 8140
+    action: accept

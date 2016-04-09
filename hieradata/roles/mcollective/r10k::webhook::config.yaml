@@ -1,0 +1,6 @@
+---
+r10k::webhook::config::hash: 'UNSET'
+r10k::webhook::config::enable_ssl: false
+r10k::webhook::config::protected: false
+r10k::webhook::config::public_key_path: '/etc/mcollective/server_public.pem'
+r10k::webhook::config::private_key_path: '/etc/mcollective/server_private.pem'

@@ -1,0 +1,2 @@
+---
+puppet::profile::agent::puppet_server: 'uw2-puppet-2a.uw2.consul'

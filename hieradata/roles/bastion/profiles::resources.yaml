@@ -1,0 +1,105 @@
+---
+# Users
+profiles::resources::users:
+  'aandres':
+    comment: 'Ariel MORELLI ANDRES'
+    uid: 705
+    groups: [ 'users' ]
+    home: '/home/aandres'
+  'araman':
+    comment: 'Anand RAMAN'
+    uid: 704
+    groups: [ 'users' ]
+    home: '/home/araman'
+  'ariel':
+    comment: 'Ariel D ONOFRIO'
+    uid: 663
+    groups: [ 'users' ]
+    home: '/home/ariel'
+  'cgorman':
+    comment: 'Connor GORMAN'
+    uid: 1979
+    groups: [ 'users' ]
+    home: '/home/cgorman'
+  'gvinokur':
+    comment: 'Gabriel VINOKUR'
+    uid: 681
+    groups: [ 'users' ]
+    home: '/home/gvinokur'
+  'hbandura':
+    comment: 'Hernan BANDURA'
+    uid: 719
+    groups: [ 'users' ]
+    home: '/home/hbandura'
+  'mauricio':
+    comment: 'Mauricio GARAVAGLIA'
+    uid: 633
+    groups: [ 'users' ]
+    home: '/home/mauricio'
+  'sarit':
+    comment: 'Sarit Mishra'
+    uid: 959
+    groups: [ 'users' ]
+    home: '/home/sarit'
+  'vic':
+    comment: 'Vic THOMAS'
+    uid: 804
+    groups: [ 'users' ]
+    home: '/home/vic'
+  'yluo':
+    comment: 'Yingda LUO'
+    uid: 745
+    groups: [ 'users' ]
+    home: '/home/yluo'
+  'njohnson':
+    comment: 'Noah JOHNSON'
+    uid: 1779
+    groups: [ 'users' ]
+    home: '/home/njohnson'
+
+# SSH Keys
+profiles::resources::sshkeys:
+  'aandres@aandres':
+    user: aandres
+    type: 'ssh-dss'
+    key: 'AAAAB3NzaC1kc3MAAACBALPZ2AN0fd4bpDSlRPKJX7bVYPlpLoqx80AEkX6GmSXWvw1pW9r9CFpAZmIRE5ZU934iABmQ5Umji6jI1hX8C3d0/gLmsod96CJBiLcH9axHiyM+2TfHy4v58fWsYIilj16EhcN3ViY33vqB3qiJWsZ8zmZUTts5vQeAfPjsf+QnAAAAFQDPLihD2q5kDTI/q/iTgQKcZNdIwwAAAIAeikAu7G+/CRcTnJn5jnCsAiHnrhRnIUcGqKBrlqUjcN6anwBpZvhPUXDQbu8OH6lqJRfG7EJUXQQnwkwIdSzU/TDnwP/CPCyzPx4g0o/fBv/0T25g9Xp3n6hQVJLRFirR5//I/ZqvfjJCEgWJJaHBIO9OLcbpfBwd/ukz/mKgSQAAAIBv2mlwWhHWjK4Ih3iVPlIOuUr5xEFnF4jj5uGeI6LqXlox2Im2iq3h67C+RVOSUqeXXdkgxDheu0BBdOKMyqNT7eNPcSOxaVJ2Ij3FJNDU78ZQbAdVm2XQUPLi/bzMBNAHJVEgsmaKfCCN5IvhAxrPmP4Rxf4hqZrA4MacZF2bUg=='
+  'araman@araman':
+    user: araman
+    type: 'ssh-rsa'
+    key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCjdxZ8EjxZKjvekkKdJ3+U2LaCN8S0BlZsXMMLB8cyIq64avzOn1YGK4ALQgcVVlJHeNvTi6PybKLXCFS/hZKjrtx1AAulT1AStnJokvZuTsyUYhvRNMBdajWR+hb89/1hZ+JzH2XvJ8eA6XFtTf1xf1VBw/sb0JvuvlRb6UkQ9ZtBjkAJUx3op96qN53BNjuFIHkMuyoZPBwvPz481j2wOfuzWVaytZtRvKfzvqbGfplCr1jT41MQ6bCvCX4irpf5+Q8Mo7/2RSN/rBJUFOHNFDym22WCVuqMgAYwR7DJ2AXcSzXsDm3Qs73/nKLlrFZlxoKyLgsqdRICS7DAvx1v'
+  'ariel@ariel':
+    user: ariel
+    type: 'ssh-rsa'
+    key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDOjnLjM9TNb83znnHNvSb2lt2Rt1AGUzquHLetFwHAhUYkfePT8AGy249zCqzllbaZlG7ahqKj1PVoBOnn8q/polt2eGwYGqbbXrXPBRnyamzI3zKzaaAHoqN92x4CUo577XtXqFUSKiNCGAtornbc1gBhWCNFnZZjuEjvQBYBvdp1oI1c8m9DlsZa62S7IDDhLjR9mm+BzX7iXg9A/c6IYuJwauG+fQgaBudaYoEV6hYmHbsqKiLEgJbSscwSTStpy6aF1gMlhPE/OW2XQD33M0qTy9FFI9nXaYQM+3V+1AUDjBmjuyuZyOZUJflIRwtZq5AYFh36UYwHlm0N5Ghb'
+  'cgorman@cgorman':
+    user: cgorman
+    type: 'ssh-rsa'
+    key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQC3AqrdzwPzdDn1+X4tVVvYpxxT0tnPbDSjNNPdY80JxMwka601opofz4C8DKxkdUJufovup2yx65Trdbf9cfhjQ6mkRj1crE9mMzQFCrOcbCGlo4luHo8n71hbyYshnZSoRgiVSTHVevce66mI7OIRSpA30MLyL81EBo5OvYhlHoRmtWc7I5LB7+a5mETBZBZcoJzLIJ4J78dQfuo+lMtDcbeqeaCRMDSZuUyqgG2tpRE16JzHShcUKACEv6J8m/BIut0NlRtyznHYhgPGfY2kKmvwB0qFXHGUN7/Ldn6v/yTB0o6Qxk3ywKIUctpPpL6uWf33/e4rF8OZuy67E0HP'
+  'gvinokur@gvinokur':
+    user: gvinokur
+    type: 'ssh-rsa'
+    key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDTfEX8pw8rFmH4AgCpnPQ9lG9/qPACuckaHSemk8sDko2bG1LbG7UDu/jVccdDvzhpw/haH3p2oHy8jCEAKB0zU0T5zjPbW3RG9kQw3gRN8fXB+T0uspZU20qp3kQ+t5zVzzCByOGy6GFb93c+jft1e6H5CUTU4O4d61Kr744/pA+rUxVwIR811JMQ4SO/3BNTbtDCxt7XW3JfT98YYc6GCtwpXARYh1g4yxS3cOXndq4LkuMG0s6uiMZq45GUf+d0OfVRQtZEySH9VoChtV+dqnPcDdVaBxajaABP8R3SQwB8B5b1n9Mia3RKLs0o77QY+TsdJw9Ie+PsccM2gJPj'
+  'hbandura@hbandura':
+    user: hbandura
+    type: 'ssh-dss'
+    key: 'AAAAB3NzaC1kc3MAAACBAKEWRf9pyPqh9WcmvHUVYIH+0/UC7p306DM/pFRw+z+EfWJ1UOgL543Wph43qievFJBkISFs8ia1JO9RQb4wZio4sZ9IfI0+EpCGyfCpmThK4Jl+m78CasWTWiIB/5WEfRFjC839graCUlvvNgkFzoPygafc2j9AoFspBFuJoTcNAAAAFQCfVs4PXXIszJ/GFwDW4a+3cByiLwAAAIBAJIWCcAcmur/lymGSCSXIA1YtO1TrracELjoKRBKrVGHiatouf0tep4JxmzLvws7bGaROQ35cYIKCZYhT5byeSLsprBT+JNpC+JZHGNlXgHtiUjvaLWE8oZSqL/tmhNqe2ZMfEBSOcotUa0IrGK45MMELf7D/m04nmbBjvhS8ZQAAAIEAgKEwo6l066yOKZQ26EoDmTN7uMhKsN6nlKEUAkcVOA2pmvlKJ/BbstiiRS9cDG7JLJd5R0XcRvL5WoQc5RfKGg5KsAbk4S0MT/FliXMhZGGZLcaS42RkpStpga6ntLHznc8giYhSV91PaE6gEVIwC9HEoXellq7z8azvfs0iGKQ='
+  'mauricio@mauricio':
+    user: mauricio
+    type: 'ssh-rsa'
+    key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDuKFEaZQfDTtAiDICfjXAEUytISGEwyyFI0MjQ2Rln59kufIC5h41wU2yGd+8nmSRiZh/G/Z9lI9LznsnIlqd5tBzGLEsxKoNgdqB5WW3ZO5Cka+3g3vEX30UNNmL0nABzGnfwwnvCkZQj2GPB8bT7gJ6YKIWnMy+DmzH4fzhrhE4LxkOlhbflK47/aTTssxBowFBOILVekTo04gDiYI8QagmepbHOUCF/AodoFZNyPSY2Gdx6QoAoAvUWE+1Yrw/C7rvt2Wskw59QuQlaoqcCMSzMJwHuHoAHm/tsP5SO3O1yIT4qNDnrV6jcuqL2aHGPlQndkaIKN0Q4hzByKiWh'
+  'sarit@sarit':
+    user: sarit
+    type: 'ssh-rsa'
+    key: 'AAAAB3NzaC1yc2EAAAABIwAAAQEAnFTqyqgDXXk694tKXrrXr0MedeIIMHpbUMWVQM5gEF54kJ5QolRW0RI5TDNO8t11iF7NOePFRyfBDrZTK8mR6hmUP/EcYMR0u++LkSlsZwA+CJRp5hLIBQnlX8p/aYpQtcyNBTN4+YwP6yeJLxQKcdVG0xnDW8vNAm9SzDLLCNdrk7rF4ZOS1Ewg+xgIw2npXzEKhxzt/s9neSJmSZ6K8QsQmsx5Ix5a/3dBm8JV3pQbphEP4QnyLayHFsH0AtkuCe6cvAOxJElnRe97hjsmbBzhgtwxC5TrMgADA4Vab5VgN4FWDCbz5tc21Y8pxCJpvlqn3adkC6ATg8bAVNGQ1Q=='
+  'vic@vic':
+    user: vic
+    type: 'ssh-dss'
+    key: 'AAAAB3NzaC1kc3MAAACBAIs6uOgngEhbM8dqT1h3NrUAsmYo2Cm3eUOW/ZV7yrFeypmWou/erorMT6CFC5cJs03YOoGmxfCmrzbBVrELZDpGVGAp6vbgQyCIfiPbt4Xz58EafdhHA5Rplw26xJgwg1oWB2r47wDpA5hu0lmaXeWAzZGndITLv1Fnj0Zbb4GBAAAAFQD1hL2gEqHezjA7rih9n6RUc/mbGwAAAIAUxV4J0H97I/tlI0WZudwgpTGdrX+aeuSEplB1CcoQycNHkkPTvCNS+p6u6Mlb7VkMrH2RGIEQNpLNpxOqpVoRtaNoJbbsM1CvYu4E/UJkbHVYQWIgMS0eFqkL6ORA/5sNL5kZ1rQbk2KwMTli54NPsdcTqlopTRn0yDHq0XIrFAAAAIBFBNCsJAzHSRxrAuOR88vXizuZFOkeC9T3RirHJemyuvfTw/z6luahE57BRtsUgNjZt79Hec35ez87NKcQuXsyg+QsBhrdcemrcdShqDZYTbHRN5kPQqS2C6T/ULxZNo9eDMVlMYViyuKU9t1IRWTC60P1YxK4OfgX0wrReUOt/w=='
+  'yluo@yluo':
+    user: yluo
+    type: 'ssh-rsa'
+    key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDQqEdge9DmkFvwqR89hoyJ12XOoIRj6dmASCZITFDAHzZHaMOeRXLgPJbQ4OJ97AghV4klbWRYCg1NqEmdz/OioGRReOPo4I8O5eU25VE1q9cV5P6kMjM5P6Vy/V8o7YCFnh75bqPz71oChT3Qv3ULOnUvoIrU8HK6gOzn1Ed+dGDtIM6823nvBuC51cL3Yfav5mMf4FOkIin4SScOlb57IbsbwLmuQkDPk1mWoGhx/JTPnb0LM7Xvr7cBxHl4EDOdv2+vt3B5Tp2K9FLnSDDu29XVcpi4aRBT1m62iatRRDrnGawnO477RLojJdvnrq56e3/BAcIMbOV6C4pFAgT/'
+  'njohnson@njohnson':
+    user: njohnson
+    type: 'ssh-rsa'
+    key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCxO6FSCTbWoDTE4XRbWZN3BcwKqsXvAF1pJnWgJXjJm2VXOTbh9Itnl+w5tpJVAqjfboKOB1eTdMYnMA31QJiqt7jkMP1Jx7cLehE8nGV4vlQTC0u8WnYmMb2uyfOVGGq6xP5PhTElL06oU5Et7aXSk0pzreyeEc9VDza8VGg1vjJSN1MkgxbqXPwtaBvctUqrY5/wFJqCc2cdSEzlqbsRA15Yi/wx/iF4YGbIOEWs6lA1hOSVhX3YJ082UtoJIyuuM9qZEQFZL0QwPo5fXaLXHPcZT18lLrFIu6vIVwqneC/wnkMlLnbgYvTYvr+ly5Q9d7gwNzrNlpSkRfHfcL3B'

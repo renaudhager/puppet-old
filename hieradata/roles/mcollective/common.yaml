@@ -1,0 +1,10 @@
+---
+include:
+  classes:
+    - apt # Bug if not included - Should be adapted if this has to me migrated onto NonDebian server.
+    - rabbitmq
+    - profiles::mcollective::rabbitmq
+    - r10k::mcollective::application
+    - r10k::webhook
+    - r10k::webhook::config
+    - profiles::mcollective::client

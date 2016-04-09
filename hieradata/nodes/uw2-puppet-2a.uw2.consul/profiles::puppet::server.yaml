@@ -1,0 +1,9 @@
+---
+profiles::puppet::server::gitlab_api_token: ''
+profiles::puppet::server::gitlab_url: ''
+profiles::puppet::server::gitlab_project: ''
+profiles::puppet::server::config_bootstrap:
+  'puppetlabs.services.ca.certificate-authority-disabled-service/certificate-authority-disabled-service':
+    ensure: absent
+  'puppetlabs.services.ca.certificate-authority-service/certificate-authority-service':
+    ensure: present

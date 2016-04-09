@@ -1,0 +1,8 @@
+---
+rabbitmq::config_stomp: true
+rabbitmq::ssl_cacert: '/etc/rabbitmq/ssl/ca.pem'
+rabbitmq::ssl_cert: '/etc/rabbitmq/ssl/server_public.pem'
+rabbitmq::ssl_key: '/etc/rabbitmq/ssl/server_private.pem'
+rabbitmq::ssl_stomp_port: 61614
+rabbitmq::ssl: true
+rabbitmq::stomp_port: 61613

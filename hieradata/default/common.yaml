@@ -1,0 +1,16 @@
+---
+include:
+  classes:
+    # Puppet
+    - puppet::profile::agent
+    - profiles::puppet::agent
+
+    # Resources : Users / Groups / SSHKeys / Files / Crons
+    - profiles::resources
+
+    # System
+    - profiles::system::packages
+    - profiles::system::sysctl
+
+    # Static facts
+    - profiles::facts

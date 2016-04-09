@@ -1,0 +1,8 @@
+---
+profiles::system::sysctl::rules:
+  kernel.panic:
+    value: 20
+    comment: 'Automatic reboot on kernel panic after 20s'
+  kernel.sysrq:
+    value: 1
+    comment: 'Enable magickeys'

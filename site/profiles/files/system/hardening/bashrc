@@ -1,0 +1,124 @@
+# Managed by Puppet
+
+# Params
+
+shopt -s cdspell            # autocorrects cd misspellings
+shopt -s checkwinsize       # update the value of LINES and COLUMNS after each command if altered
+shopt -s cmdhist            # save multi-line commands in history as single line
+shopt -s expand_aliases     # expand aliases
+shopt -s extglob            # enable extended pattern-matching features
+shopt -s histappend         # append to (not overwrite) the history file
+eval "`dircolors -b`"
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# Exports
+export HISTCONTROL=ignoredups
+export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
+export TERM=xterm-color
+export PAGER=/usr/bin/less
+export EDITOR=/usr/bin/vim
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;33'
+
+# Path
+if [ "`id -u`" -eq 0 ]; then
+    PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin"
+else
+    PATH="/usr/local/bin:/usr/bin:/bin:/usr/games"
+fi
+
+# Prompt
+if [ $UID -eq 0 ] ; then
+    export PS1='\[\e[93m\][\D{%H:%M:%S}]\[\e[1;91m\][\u@\h:\[\e[1;34m\]\w\[\e[1;91m\]]\$\[\e[0;0m\] '
+else
+    export PS1='\[\e[93m\][\D{%H:%M:%S}]\[\e[1;32m\][\u@\h:\[\e[1;34m\]\w\[\e[1;32m\]]\$\[\e[0;0m\] '
+fi
+
+# Bash completion
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+# Alias
+alias mkdir="mkdir -pv"
+alias ll="ls -l"
+alias ls="ls --color=auto"  # add colors for filetype recognition
+alias la="ls -la"            # show hidden files
+alias lx="ls -lXB"          # sort by extension
+alias lk="ls -lSr"          # sort by size, biggest last
+alias lc="ls -ltcr"         # sort by and show change time, most recent last
+alias lu="ls -ltur"         # sort by and show access time, most recent last
+alias lt="ls -ltr"          # sort by date, most recent last
+alias lm="ls -al |more"     # pipe through 'more'
+alias lr="ls -lR"           # recursive ls
+alias rm="rm -i"
+alias diff="diff -u"
+alias vi="vim"
+
+alias ..="cd ../"                           # Go back 1 directory level
+alias .2="cd ../../"                        # Go back 2 directory levels
+alias .3="cd ../../../"                     # Go back 3 directory levels
+alias .4="cd ../../../../"                  # Go back 4 directory levels
+alias .5="cd ../../../../../"               # Go back 5 directory levels
+alias .6="cd ../../../../../../"            # Go back 6 directory levels
+alias path="echo -e ${PATH//:/\\n}"         # path:         Echo all executable Paths
+
+ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
+
+# Multicore compression
+if [[ -e /usr/bin/pigz ]] ;
+then
+    alias gzip="pigz"
+fi
+if [[ -e /usr/bin/pbzip2 ]] ;
+then
+    alias bzip2="pbzip2"
+fi
+
+# Extraction command
+extract () {
+  if [ -f $1 ] ; then
+      case $1 in
+          *.tar.bz2)   tar xvjf $1            ;;
+          *.tar.gz)    pigz -dc $1 | tar xf - ;;
+          *.tar.xz)    tar xvJf $1            ;;
+          *.bz2)       bunzip2 $1             ;;
+          *.rar)       unrar x $1             ;;
+          *.gz)        pigz -dc $1            ;;
+          *.tar)       tar xvf $1             ;;
+          *.tbz2)      tar xvjf $1            ;;
+          *.tgz)       tar xvzf $1            ;;
+          *.zip)       unzip $1 -d ${1%%.*}   ;;
+          *.Z)         uncompress $1          ;;
+          *.7z)        7z x $1                ;;
+          *.xz)        unxz $1                ;;
+          *.exe)       cabextract $1          ;;
+          *)           echo "\`$1': unrecognized file compression" ;;
+      esac
+  else
+      echo "\`$1' is not a valid file"
+  fi
+}
+
+# if the command-not-found package is installed, use it
+if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found ]; then
+    function command_not_found_handle {
+        # check because c-n-f could've been removed in the meantime
+        if [ -x /usr/lib/command-not-found ]; then
+           /usr/bin/python /usr/lib/command-not-found -- $1
+           return $?
+        elif [ -x /usr/share/command-not-found ]; then
+           /usr/bin/python /usr/share/command-not-found -- $1
+           return $?
+        else
+           return 127
+        fi
+    }
+fi
+
+[ -d /etc/bashrc.d ] &&
+for file in `ls -1 /etc/bashrc.d/` ; do
+    source "/etc/bashrc.d/$file" ;
+done ;

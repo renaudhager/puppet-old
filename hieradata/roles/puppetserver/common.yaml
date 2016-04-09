@@ -1,0 +1,11 @@
+---
+include:
+  classes:
+    - logrotate
+    - nginx
+    - profiles::nginx
+    - profiles::puppet::server
+    - puppetserver
+    - puppetdb::master::config
+    - r10k
+    - r10k::mcollective

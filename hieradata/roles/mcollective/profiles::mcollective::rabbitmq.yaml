@@ -1,0 +1,4 @@
+---
+profiles::mcollective::rabbitmq::server_ca: 'puppet:///modules/profiles/mcollective/certs/ca.pem'
+profiles::mcollective::rabbitmq::server_public_key: 'puppet:///modules/profiles/mcollective/certs/mcollective-servers.pem'
+profiles::mcollective::rabbitmq::server_private_key: 'puppet:///modules/profiles/mcollective/private_keys/mcollective-servers.pem'

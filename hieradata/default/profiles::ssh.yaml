@@ -1,0 +1,21 @@
+---
+profiles::ssh::store_configs: false
+profiles::ssh::server_options:
+  Port: 22
+  Protocol: 2
+  SyslogFacility: 'AUTHPRIV'
+  LoginGraceTime: '1m'
+  PermitRootLogin: 'forced-commands-only'
+  StrictModes: 'yes'
+  MaxAuthTries: 3
+  PermitEmptyPasswords: 'no'
+  PasswordAuthentication: 'yes'
+  ChallengeResponseAuthentication: 'no'
+  UsePAM: 'yes'
+  AcceptEnv: 'LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL LANGUAGE XMODIFIERS'
+  X11Forwarding: 'no'
+  ClientAliveInterval: 30
+  ClientAliveCountMax: 3
+  UseDNS: 'no'
+  PrintMotd: 'no'
+  PrintLastLog: 'no'

@@ -1,0 +1,13 @@
+---
+mcollective::client: false
+mcollective::connector: 'rabbitmq'
+mcollective::manage_packages: false
+mcollective::middleware_ssl: true
+mcollective::rabbitmq_vhost: mcollective
+mcollective::securityprovider: 'ssl'
+mcollective::service_enable: false
+mcollective::ssl_ca_cert: 'puppet:///modules/profiles/mcollective/certs/ca.pem'
+mcollective::ssl_ciphers: AES256-SHA256
+mcollective::ssl_client_certs: 'puppet:///modules/profiles/mcollective/client_certs'
+mcollective::ssl_server_private: 'puppet:///modules/profiles/mcollective/private_keys/mcollective-servers.pem'
+mcollective::ssl_server_public: 'puppet:///modules/profiles/mcollective/certs/mcollective-servers.pem'

@@ -1,0 +1,5 @@
+---
+profiles::mcollective::client::user: root
+profiles::mcollective::client::user_homedir: /root
+profiles::mcollective::client::user_certificate: 'puppet:///modules/profiles/mcollective/client_certs/root.pem'
+profiles::mcollective::client::user_private_key: 'puppet:///modules/profiles/mcollective/private_keys/mcollective-root.pem'

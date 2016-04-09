@@ -1,0 +1,5 @@
+---
+profiles::nginx::locations:
+  'puppetca':
+    location_custom_cfg:
+      proxy_pass: 'http://puppetserver'

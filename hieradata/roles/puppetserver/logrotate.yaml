@@ -1,0 +1,17 @@
+---
+logrotate::rules:
+  'puppetserver':
+    compress: true
+    copytruncate: true
+    create: true
+    create_group: puppet
+    create_mode: 640
+    create_owner: puppet
+    ifempty: false
+    missingok: true
+    path: /var/log/puppetlabs/puppetserver/*.log
+    rotate_every: hour
+    rotate: 72
+    su: true
+    su_group: puppet
+    su_owner: puppet

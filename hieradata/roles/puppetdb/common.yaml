@@ -1,0 +1,8 @@
+---
+include:
+  classes:
+    # PuppetDB
+    - puppetdb::server
+    - profiles::puppet::db
+    - docker
+    - docker::run_instance

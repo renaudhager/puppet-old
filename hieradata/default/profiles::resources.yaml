@@ -1,0 +1,22 @@
+---
+# Users
+profiles::resources::users:
+  'rhager':
+    comment: 'Renaud HAGER'
+    uid: 618
+    groups: [ 'wheel', 'express' ]
+    home: '/home/rhager'
+
+# Groups
+profiles::resources::groups:
+  'users':
+    gid: 100
+  'wheel':
+    gid: 9000
+
+# SSH Keys
+profiles::resources::sshkeys:
+  'rhager@rhager':
+    user: rhager
+    type: 'ssh-rsa'
+    key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDV5eSyd3JE2AD/9s/ix/yLfb561XRZRLOviWTlNGtIiD+2lwpH/dOjzZ+Z3gwyc1JwcQ/JOwHNJDBdGbxloKzrzx4BZEAZV18o4lDMMbZBfivUmXGCnIi52FMH3wqwWGVZiuW6xi6cOMx52x7itHXNu8cjd6aCgmSIHS73QCS56owVRKKowc/YiRFt7h7NZ4k/3CnzJgWJ2BmRU3wE5Q3Yt/f56TkA59Ny6I1JNuUHlbohIOkg38ltyPE4klUmrZc7lthnkyYewr8HModQYjl0f+Y/H/KaALD3w9sxlia1PPRAIjDvtqucRoNslKrFjfeUElP0XNKI4NJoaN72tar1'

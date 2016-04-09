@@ -1,0 +1,2 @@
+---
+puppet::profile::agent::agent_version: "1.4.1-1%{::lsbdistcodename}"

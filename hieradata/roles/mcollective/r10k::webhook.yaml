@@ -1,0 +1,3 @@
+---
+r10k::webhook::user: puppet
+r10k::webhook::group: puppet

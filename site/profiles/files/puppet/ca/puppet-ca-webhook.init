@@ -1,0 +1,10 @@
+description "Puppet CA Webhook"
+
+start on runlevel [23]
+stop on runlevel [06]
+
+expect daemon
+
+script
+    /usr/local/bin/puppet-ca-webhook >> /var/log/puppet-ca-webhook.log 2>&1
+end script

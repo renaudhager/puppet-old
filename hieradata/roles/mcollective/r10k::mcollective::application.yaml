@@ -1,0 +1,3 @@
+---
+r10k::mcollective::application::agent_path: /opt/puppetlabs/mcollective/mcollective/agent
+r10k::mcollective::application::app_path: /opt/puppetlabs/mcollective/mcollective/application

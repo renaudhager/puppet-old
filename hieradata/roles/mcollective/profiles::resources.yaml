@@ -1,0 +1,11 @@
+---
+profiles::resources::users:
+  'puppet':
+    comment: 'Puppet user'
+    uid: 999
+    groups: [ 'puppet' ]
+    home: '/opt/puppetlabs'
+
+profiles::resources::groups:
+  'puppet':
+    gid: 999

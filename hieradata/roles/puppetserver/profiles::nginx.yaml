@@ -1,0 +1,51 @@
+---
+profiles::nginx::vhosts:
+  'puppetserver':
+    server_name: ['puppetserver']
+    ssl: true
+    ssl_port: '8140'
+    listen_port: '8140'
+    ssl_cert: "/etc/puppetlabs/puppet/ssl/certs/%{::fqdn}.pem"
+    ssl_key: "/etc/puppetlabs/puppet/ssl/private_keys/%{::fqdn}.pem"
+    ssl_ciphers: 'ALL:!ADH:RC4+RSA:+HIGH:+MEDIUM:-LOW:-SSLv2:-EXP'
+    ssl_protocols: 'TLSv1.2 TLSv1.1 TLSv1 SSLv3'
+    use_default_location: false
+    vhost_cfg_append:
+      ssl_crl: '/etc/puppetlabs/puppet/ssl/crl.pem'
+      ssl_client_certificate: '/etc/puppetlabs/puppet/ssl/certs/ca.pem'
+      ssl_verify_client: 'optional'
+      proxy_set_header:
+        - 'Host $host'
+        - 'X-Real-IP $remote_addr'
+        - 'X-Forwarded-For $proxy_add_x_forwarded_for'
+        - 'X-SSL-Issuer $ssl_client_i_dn'
+        - 'X-Client-Verify $ssl_client_verify'
+        - 'X-Client-DN $ssl_client_s_dn'
+        #- 'X-Client-Cert $ssl_client_cert' # Not compatible - See BUG SERVER-217 / Only used for trusted facts
+      root: '/usr/share/empty'
+
+profiles::nginx::locations:
+  'puppetserver':
+    location: '/'
+    vhost: 'puppetserver'
+    proxy_set_header: []
+    location_custom_cfg:
+      proxy_pass: 'http://puppetserver'
+      proxy_redirect: 'off'
+      proxy_connect_timeout: '90'
+      proxy_read_timeout: '300'
+    priority: 701
+  'puppetca':
+    location: '~ ^/.*/certificate.*'
+    vhost: 'puppetserver'
+    proxy_set_header: []
+    location_custom_cfg:
+      proxy_pass: 'http://puppetserver'
+      proxy_redirect: 'off'
+      proxy_connect_timeout: '90'
+      proxy_read_timeout: '300'
+    priority: 701
+
+profiles::nginx::upstreams:
+  'puppetserver':
+    members: ['127.0.0.1:8139']

@@ -1,0 +1,6 @@
+---
+profiles::firewall::pre::rules:
+  '100 accept port mcollective':
+    proto: tcp
+    dport: 61614
+    action: accept

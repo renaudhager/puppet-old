@@ -1,0 +1,7 @@
+---
+puppetserver::version: 2.3.1-1puppetlabs1
+puppetserver::config:
+  java_args:
+    xms: 3072m
+    xmx: 3072m
+    maxpermsize: 512m

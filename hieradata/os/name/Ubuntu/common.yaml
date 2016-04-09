@@ -1,0 +1,27 @@
+---
+include:
+  classes:
+    - apt
+    - profiles::apt
+
+    # Firewall
+    - profiles::firewall
+
+    # MOTD
+    - profiles::motd
+
+    # NTP
+    - ntp
+
+    # Debian resolvconf module
+    - resolvconf
+
+    # SSH
+    - profiles::ssh
+
+    # Sudo
+    - sudo
+    - profiles::sudo
+
+    # System
+    - profiles::system::hardening

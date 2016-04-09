@@ -1,0 +1,2 @@
+---
+mcollective::common::config::purge_libdir: false

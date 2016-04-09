@@ -1,0 +1,4 @@
+---
+profiles::sudo::rules:
+  'wheel_root_all':
+    content: '%wheel ALL=(ALL) NOPASSWD: ALL'
