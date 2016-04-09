@@ -6,6 +6,7 @@ include:
     - profiles::nginx
     - profiles::puppet::server
     - puppetserver
+    - puppetdb
     - puppetdb::master::config
     - r10k
-    - r10k::mcollective
+    #- r10k::mcollective

@@ -1,6 +1,1 @@
 ---
-# We dont want mcollective running on this Virtual DC
-include:
-  classes:
-    - --mcollective
-    - --profiles::mcollective::server
