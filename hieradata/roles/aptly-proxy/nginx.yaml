@@ -1,6 +1,6 @@
 ---
 nginx::nginx_vhosts:
   'aptly':
-      proxy: 'http://medallia-aptly-repo.s3-website-us-west-2.amazonaws.com'
-      proxy_set_header:
-          - 'Host medallia-aptly-repo.s3-website-us-west-2.amazonaws.com'I
+    proxy: 'http://medallia-aptly-repo.s3-website-us-west-2.amazonaws.com'
+    proxy_set_header:
+      - 'Host medallia-aptly-repo.s3-website-us-west-2.amazonaws.com'
