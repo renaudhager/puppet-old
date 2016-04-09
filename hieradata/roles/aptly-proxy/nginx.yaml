@@ -4,3 +4,9 @@ nginx::nginx_vhosts:
     proxy: 'http://medallia-aptly-repo.s3-website-us-west-2.amazonaws.com'
     proxy_set_header:
       - 'Host medallia-aptly-repo.s3-website-us-west-2.amazonaws.com'
+
+nginx::nginx_locations:
+  'healthcheck':
+    location: /healthcheck
+    www_root: /var/www/html
+    vhost: 'aptly'
