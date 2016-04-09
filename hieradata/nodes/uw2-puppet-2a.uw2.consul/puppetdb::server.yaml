@@ -1,4 +1,0 @@
----
-puppetdb::server::database: embedded
-puppetdb::server::listen_address: 0.0.0.0
-puppetdb::server::manage_firewall: false
