@@ -8,5 +8,6 @@ nginx::nginx_vhosts:
 nginx::nginx_locations:
   'healthcheck':
     location: /healthcheck
-    www_root: /var/www/html
     vhost: 'aptly'
+    location_custom_cfg:
+      return: 200
