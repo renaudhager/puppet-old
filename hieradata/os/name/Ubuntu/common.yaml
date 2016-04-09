@@ -3,10 +3,7 @@ include:
   classes:
     - apt
     - profiles::apt
-
-    # Firewall
-    - profiles::firewall
-
+    
     # MOTD
     - profiles::motd
 

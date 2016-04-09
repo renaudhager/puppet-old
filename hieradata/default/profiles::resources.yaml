@@ -4,7 +4,7 @@ profiles::resources::users:
   'rhager':
     comment: 'Renaud HAGER'
     uid: 618
-    groups: [ 'wheel', 'express' ]
+    groups: [ 'wheel', 'users' ]
     home: '/home/rhager'
 
 # Groups
