@@ -1,0 +1,18 @@
+---
+profiles::nginx::vhosts:
+  'web-aptly':
+    server_name: "%{::fqdn}"
+    ssl: false
+    listen_port: '80'
+    vhost_cfg_append:
+      root: '/usr/share/empty'
+
+profiles::nginx::locations:
+  'web-aptly':
+    location: '/'
+    vhost: 'web-aptly'
+    proxy_set_header: []
+    location_custom_cfg:
+      proxy_pass: 'http://medallia-aptly-repo.s3-website-us-west-2.amazonaws.com'
+      proxy_connect_timeout: '90'
+      proxy_read_timeout: '300'
