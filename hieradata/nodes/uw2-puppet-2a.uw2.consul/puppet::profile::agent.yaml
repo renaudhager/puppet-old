@@ -1,3 +1,0 @@
----
-puppet::profile::agent::puppet_server: 'uw2-puppet-2a.uw2.consul'
-puppet::profile::agent::ca_server: 'uw2-puppet-2a.uw2.consul'
