@@ -1,0 +1,8 @@
+---
+profiles::ssh::server_options:
+  Port: 22
+  SyslogFacility: 'AUTH'
+  PermitRootLogin: 'without-password'
+  StrictModes: 'no'
+  PermitEmptyPasswords: 'yes'
+  ChallengeResponseAuthentication: 'yes'
