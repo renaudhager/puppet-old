@@ -27,7 +27,7 @@ define profiles::gpg::gpg_key (
 
     exec { "import-gpg":
         path    => '/bin:/usr/bin',
-        command => "echo \"${gpg_key_value}\" | ${gpg_cmd} ${gpg_store}",
+        command => "echo '${gpg_key_value}' | ${gpg_cmd} ${gpg_store}",
         unless  => "echo '${gpg_key_id}' | xargs -n1 ${gpg_cmd_list} ${gpg_store}",
         user    => $owner,
       }
