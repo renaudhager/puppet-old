@@ -17,4 +17,10 @@ aptly::mirror:
     repos: 'main'
     release: 'trusty-pgdg'
     architectures: 'amd64'
-    #key:      '4BD6EC30'
+    key: 'ACCC4CF8'
+
+aptly::mirror:
+  'puppetlabs':
+    location: 'http://apt.puppetlabs.com/'
+    repos: 'main'
+    key: '4BD6EC30'
