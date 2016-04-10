@@ -5,3 +5,8 @@ aptly::user: 'aptly'
 aptly::repo: false
 aptly::config:
   rootDir: '/data/aptly'
+  S3PublishEndpoints:
+    medallia-aptly-repo:
+      region: 'us-west-2'
+      bucket: 'medallia-aptly-repo'
+      acl: 'public-read'

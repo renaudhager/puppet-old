@@ -7,7 +7,12 @@ profiles::resources::users:
     home: '/home/aptly'
 
 profile::resources::files:
+  '/data':
+    ensure: directory
+    owner: aptly
+    mode: 744
   '/data/aptly':
     ensure: directory
     owner: aptly
     mode: 744
+    require: File['/data']
