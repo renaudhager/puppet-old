@@ -13,5 +13,5 @@ nginx::nginx_locations:
       return: 200
   'key':
     location: /key
-    vhosts: 'aptly'
+    vhost: 'aptly'
     www_root: '/etc/nginx/www'
