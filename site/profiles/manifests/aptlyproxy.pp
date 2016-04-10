@@ -1,4 +1,6 @@
-class profiles::aptlyproxy (){
+class profiles::aptlyproxy (
+  String $key_file = '',
+  ){
 
   file { '/etc/nginx/www':
     ensure => 'directory',
@@ -15,12 +17,12 @@ class profiles::aptlyproxy (){
     require => File['/etc/nginx/www'],
   }
 
-  file { '/etc/nginx/www/key/27B9DA79.asc':
+  file { "/etc/nginx/www/key/${key_file}":
     ensure  => 'present',
     owner   => 'root',
     group   => 'root',
     mode    => '644',
-    source  => 'puppet:///modules/profiles/aptlyproxy/aptly.pub',
+    source  => "puppet:///modules/profiles/aptlyproxy/${key_file}",
     require => File['/etc/nginx/www/key'],
   }
 }
