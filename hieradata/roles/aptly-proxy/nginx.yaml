@@ -11,3 +11,7 @@ nginx::nginx_locations:
     vhost: 'aptly'
     location_custom_cfg:
       return: 200
+  'key':
+    location: /key
+    vhosts: 'aptly'
+    www_root: '/etc/nginx/www'
