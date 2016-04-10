@@ -8,7 +8,8 @@ profiles::aptlymirrors:
   'pgsql':
     location: 'http://apt.postgresql.org/pub/repos/apt/'
     release: 'trusty-pgdg'
-    architectures: 'amd64'
+    architectures:
+      - amd64
     repos:
       - main
     key: 'ACCC4CF8'
