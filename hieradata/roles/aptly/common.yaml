@@ -3,3 +3,4 @@ include:
   classes:
     - aptly
     - profiles::resources
+    - profiles::gpg

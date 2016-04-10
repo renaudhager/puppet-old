@@ -10,3 +10,11 @@ aptly::config:
       region: 'us-west-2'
       bucket: 'medallia-aptly-repo'
       acl: 'public-read'
+
+aptly::mirror:
+  'pgsql':
+    location: 'http://apt.postgresql.org/pub/repos/apt/'
+    repos: 'main'
+    release: 'trusty-pgdg'
+    architectures: 'amd64'
+    #key:      '4BD6EC30'

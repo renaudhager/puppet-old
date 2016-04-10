@@ -10,9 +10,10 @@ profiles::resources::files:
   '/data':
     ensure: directory
     owner: aptly
-    mode: 744
+    group: users
+    mode: '744'
   '/data/aptly':
     ensure: directory
     owner: aptly
-    mode: 744
-    require: File['/data']
+    group: users
+    mode: '744'
