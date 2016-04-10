@@ -1,0 +1,7 @@
+---
+profiles::aptlymirrors:
+  'puppetlabs':
+    location: 'http://apt.puppetlabs.com/'
+    repo:
+      - main
+    key: '4BD6EC30'

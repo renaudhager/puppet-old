@@ -4,3 +4,4 @@ include:
     - aptly
     - profiles::resources
     - profiles::gpg
+    - profiles::aptlymirrors
