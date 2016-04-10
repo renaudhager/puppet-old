@@ -6,7 +6,7 @@ profiles::resources::users:
     groups: [ 'users' ]
     home: '/home/aptly'
 
-profile::resources::files:
+profiles::resources::files:
   '/data':
     ensure: directory
     owner: aptly
