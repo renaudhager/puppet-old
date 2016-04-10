@@ -1,3 +1,7 @@
 ---
 aptly::user: 'aptly'
+# Issue with aptly module to retrieve the pub key
+# so I define aptly repo with apt module.
 aptly::repo: false
+aptly::config:
+  rootDir: '/data/aptly'

@@ -1,3 +1,6 @@
+---
+# Issue with aptly module to retrieve the pub key
+# so I define aptly repo here.
 profiles::apt::sources:
   aptly:
     location: 'http://repo.aptly.info/ '

@@ -5,3 +5,9 @@ profiles::resources::users:
     uid: 1001
     groups: [ 'users' ]
     home: '/home/aptly'
+
+profile::resources::files:
+  '/data/aptly':
+    ensure: directory
+    owner: aptly
+    mode: 744
