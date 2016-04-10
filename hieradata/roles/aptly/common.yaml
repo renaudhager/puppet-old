@@ -3,5 +3,6 @@ include:
   classes:
     - aptly
     - profiles::resources
-    - profiles::gpg
+    # No more need.
+    #- profiles::gpg
     - profiles::aptlymirrors
