@@ -1,7 +1,0 @@
----
-profiles::resources::users:
-  'aptly':
-    comment: 'User aptly'
-    uid: 1001
-    groups: [ 'users' ]
-    home: '/home/aptly'

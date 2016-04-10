@@ -1,4 +1,0 @@
----
-profiles::sudo::rules:
-  'ubuntu_root_all':
-    content: 'ubuntu ALL=(ALL) NOPASSWD: ALL'
