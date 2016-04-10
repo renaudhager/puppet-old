@@ -3,9 +3,5 @@ class profiles::aptlymirrors (){
 
   validate_hash( $mirrors )
 
-  $defaults = {
-      ensure => present,
-  }
-
-  create_resources( aptly::mirror, $mirror, $defaults )
+  create_resources( aptly::mirror, $mirrors )
 }

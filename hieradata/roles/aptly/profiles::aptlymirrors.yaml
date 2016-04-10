@@ -2,6 +2,13 @@
 profiles::aptlymirrors:
   'puppetlabs':
     location: 'http://apt.puppetlabs.com/'
-    repo:
+    repos:
       - main
     key: '4BD6EC30'
+  'pgsql':
+    location: 'http://apt.postgresql.org/pub/repos/apt/'
+    release: 'trusty-pgdg'
+    architectures: 'amd64'
+    repos:
+      - main
+    key: 'ACCC4CF8'
