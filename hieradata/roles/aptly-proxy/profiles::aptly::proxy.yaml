@@ -1,2 +1,2 @@
 ---
-profiles::aptlyproxy::key_file: '27B9DA79.asc'
+profiles::aptly::proxy::key_file: '27B9DA79.asc'

@@ -5,4 +5,4 @@ include:
     - profiles::resources
     # No more need.
     #- profiles::gpg
-    - profiles::aptlymirrors
+    - profiles::aptly::mirrors
