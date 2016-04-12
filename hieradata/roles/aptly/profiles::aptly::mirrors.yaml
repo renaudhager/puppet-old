@@ -1,5 +1,5 @@
 ---
-profiles::aptlymirrors:
+profiles::aptly::mirrors::mirrors:
   'puppetlabs':
     location: 'http://apt.puppetlabs.com/'
     repos:

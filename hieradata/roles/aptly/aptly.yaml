@@ -10,17 +10,3 @@ aptly::config:
       region: 'us-west-2'
       bucket: 'medallia-aptly-repo'
       acl: 'public-read'
-
-aptly::mirror:
-  'pgsql':
-    location: 'http://apt.postgresql.org/pub/repos/apt/'
-    repos: 'main'
-    release: 'trusty-pgdg'
-    architectures: 'amd64'
-    key: 'ACCC4CF8'
-
-aptly::mirror:
-  'puppetlabs':
-    location: 'http://apt.puppetlabs.com/'
-    repos: 'main'
-    key: '4BD6EC30'

@@ -1,4 +1,4 @@
-class profiles::aptlyproxy (
+class profiles::aptly::proxy (
   String $key_file = '',
   ){
 
@@ -22,7 +22,7 @@ class profiles::aptlyproxy (
     owner   => 'root',
     group   => 'root',
     mode    => '644',
-    source  => "puppet:///modules/profiles/aptlyproxy/${key_file}",
+    source  => "puppet:///modules/profiles/aptly/proxy/${key_file}",
     require => File['/etc/nginx/www/key'],
   }
 }

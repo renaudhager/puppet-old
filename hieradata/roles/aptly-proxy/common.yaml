@@ -2,4 +2,4 @@
 include:
   classes:
     - nginx
-    - profiles::aptlyproxy
+    - profiles::aptly::proxy
